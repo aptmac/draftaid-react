@@ -20,9 +20,12 @@ Jay Zheng's original application is great out of the box. However, I wanted to t
 - Removed the 'reset' button (resetting the page can be done by refreshing)
 - Added undrafted lists for kickers and team defenses
 - Moved the master list of undrafted players to be inbetween the lists of players by position and drafted players
+- Thanks to kellenproctor, the application can be used with a local .json file pulled from fantasy pros, which allows for ~400 data points. This makes it possible to view kickers and defense, as well as showing more overall depth. The code to fetch the remote .json from the draftaid API is commented out on `DraftBoard.js`, but can be easily uncommented for future use.
 
 ## Kudos
 
 Thank you to [Jay Zheng](https://github.com/jayjzheng) for creating this application, and elevating my draft results for (hopefully) many upcoming Fantasy Football seasons to come.
+
+Kudos to kellenproctor for their PRs to draftaid-react! I was able to salvage the `fantasyProCsv.py` file to use a local player data .json file for the application. This allowed for an extra ~200 data items for the application, which made it possible to track kickers and more defense options.
 
 

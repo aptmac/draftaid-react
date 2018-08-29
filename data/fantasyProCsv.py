@@ -1,6 +1,7 @@
 # Credit to: https://github.com/jayjzheng/draftaid-react/blob/5a99a0b9f4cac4e4ccbfb36c86ecee19640969b3/data/fantasyProCsv.py
 
 import json
+import re
 import requests
 from bs4 import BeautifulSoup
 
@@ -42,8 +43,10 @@ def get_data(format):
             vsadp = text[10]
             if 'DST' not in position:
                 name, team = text[1].strip().rsplit(None, 1)
+                name = re.sub("[A-Z]\.\s.*", "", name)
             else:
                 name = text[1].strip()
+                name = re.match('.*\)', name).group()
                 team = ''
             player['position'] = position
             player['name'] = name

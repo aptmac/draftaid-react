@@ -3,7 +3,7 @@ import React from 'react';
 function Footer() {
     return (
         <div className="footer">
-            footer
+            Draftaid-react 2018.
         </div>
     );
 }

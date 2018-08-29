@@ -1,4 +1,7 @@
-# See http://help.github.com/ignore-files/ for more about ignoring files.
+# csv files
+/data/rankings_halfppr.json
+/data/rankings_ppr.json
+/data/rankings_standard.json
 
 # dependencies
 /node_modules
@@ -15,4 +18,4 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-
+package-lock.json

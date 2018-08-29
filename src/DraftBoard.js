@@ -23,29 +23,43 @@ class DraftBoard extends Component {
       this.fetchPlayers(this.state.format);
     }
 
+    // using local .json file
     fetchPlayers(format) {
-      const url = 'https://draftaid-api.herokuapp.com/rankings';
-      const self = this;
-
-      fetch(url+'?format='+format, {
-        method: 'get'
-      }).then(function(response) {
-        response.json().then(function(res){
-          self.setState({
-            players: res.rankings,
-            filteredPlayers: res.rankings,
-            isLoading: false,
-            format: format,
-            query: '',
-          });
-        });
-      }).catch(function(err) {
-        self.setState({
-          fetchError: err,
-          isLoading: false,
-        });
+      // create function to read from .json file
+      var localJson = require('../data/rankings_standard.json');
+      this.setState({
+        players: localJson.rankings,
+        filteredPlayers: localJson.rankings,
+        isLoading: false,
+        format: format,
+        query: '',
       });
     }
+
+    // using draftaid-api
+    //
+    // fetchPlayers(format) {
+    //   const url = 'https://draftaid-api.herokuapp.com/rankings';
+    //   const self = this;
+    //   fetch(url+'?format='+format, {
+    //     method: 'get'
+    //   }).then(function(response) {
+    //     response.json().then(function(res){
+    //       self.setState({
+    //         players: res.rankings,
+    //         filteredPlayers: res.rankings,
+    //         isLoading: false,
+    //         format: format,
+    //         query: '',
+    //       });
+    //     });
+    //   }).catch(function(err) {
+    //     self.setState({
+    //       fetchError: err,
+    //       isLoading: false,
+    //     });
+    //   });
+    // }
 
     searchPlayers(query) {
       let players = this.state.players.filter(player =>

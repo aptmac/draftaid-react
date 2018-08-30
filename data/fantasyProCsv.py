@@ -43,7 +43,7 @@ def get_data(format):
             vsadp = text[10]
             if 'DST' not in position:
                 name, team = text[1].strip().rsplit(None, 1)
-                name = re.sub("[A-Z]\.\s.*", "", name)
+                name = re.match(r'(.*)[A-Z]\.', name).group(1)
             else:
                 name = text[1].strip()
                 name = re.match('.*\)', name).group()

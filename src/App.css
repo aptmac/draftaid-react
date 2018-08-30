@@ -67,12 +67,12 @@ html, body {
   }
 
   .overall-rankings {
-    height: 710px;
+    height: 1100px;
     margin-bottom: 10px;
   }
 
   .draft-history {
-    height: 710px;
+    height: 1100px;
   }
 
   .table-condensed > tbody > tr > td {

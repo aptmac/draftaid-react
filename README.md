@@ -1,4 +1,6 @@
-# Draft Aid (Fantasy Football)
+# Draft Aid (Fantasy Football) - DEPRICATED
+
+### Note: I will not be updating this repo any more. Instead I've migrated this code to it's new home at: https://github.com/aptmac/ffdojo
 
 This repository contains a modified version of Jay Zheng's draftaid-react project, which can be found at: [https://github.com/jayjzheng/draftaid-react](https://github.com/jayjzheng/draftaid-react)
 
